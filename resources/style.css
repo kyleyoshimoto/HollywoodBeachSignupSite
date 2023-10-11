@@ -4,7 +4,15 @@ html {
     font-family: 'Raleway', sans-serif;
     font-size: 1rem;
     background-color: #093697;
-    margin: 0.5rem;
+    width: 100%;
+}
+
+body {
+    width: 100%;
+}
+
+p {
+    padding: 0 1rem;
 }
 
 .center {
@@ -14,6 +22,7 @@ html {
 
 .main-content {
     position: relative;
+    width: 100%;
   }
 
 .fade {
@@ -52,12 +61,14 @@ header {
     border: solid;
     height: 15rem;
     background-color: rgba(255, 255, 255, 0.7);
+    box-sizing: border-box;
+    z-index: 1;
 }
 
 header .content {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: stretch;
 }
 
 header h1 {
@@ -76,8 +87,11 @@ header ul {
     display: flex;
 }
 
+.covid {
+    height: 20%;
+}
+
 header li a, .covid {
-    display: block;
     float: left;
     color: white;
     background-color: black;
@@ -85,11 +99,10 @@ header li a, .covid {
     padding: 0.75rem;
     text-decoration: none;
     font-size: 1.25rem;
-    line-height: 25px;
     border-radius: 1px;
     box-shadow: inset 0 0 0 0 white;
     transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
-    margin: 3rem;
+    margin: 1rem 3rem;
     flex-shrink: 1;
 }
 
@@ -105,14 +118,16 @@ header .phone-number {
     font-size: 1.5rem;
     border-radius: 20px 40px;
     line-height: 1.25;
+    height: 50%;
+    margin: auto;
 }
 
 /* sign-up section */
 #sign-up-section {
     margin: 0 auto;
-    display: grid;
+    display: flex;
     width: 100%;
-    grid-template-columns: 0 0;
+    grid-template-columns: 1fr 1fr;
     justify-items: center;
     justify-content: space-evenly;
     align-items: center;
@@ -120,17 +135,19 @@ header .phone-number {
     background-image: url('resources/images/CI_habor.jpeg');
     background-size: cover;
     background-attachment: fixed;
+    flex-shrink: 1;
 }
 
 .sign-up {
     width: 24rem;
     height: 23rem;
-    margin: 3rem;
+    margin: 3rem 0;
     border: solid;
     border-width: 4px;
     border-radius: 4px;
     background-color: rgba(255, 255, 255, 0.8);
     align-content: center;
+    flex-shrink: 1;
 }
 
 .sign-up a {
@@ -159,6 +176,22 @@ header .phone-number {
 .sign-up img {
     width: 100%;
     height: 100%;
+}
+
+@media only screen and (max-width: 760px) {
+    #sign-up-section {
+        margin: 3rem 0;
+        display: flex;
+        width: 100%;
+        justify-items: center;
+        justify-content: space-evenly;
+        align-items: center;
+        align-content: center;
+        background-image: url('resources/images/CI_habor.jpeg');
+        background-size: cover;
+        background-attachment: fixed;
+        flex-shrink: 1;
+    }
 }
 
 /* Footer */
