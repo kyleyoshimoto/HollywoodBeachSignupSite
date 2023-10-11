@@ -1,9 +1,22 @@
 /* Universal Styles */
 
+
+
 html {
     font-family: 'Raleway', sans-serif;
     font-size: 1rem;
+    background-color: dodgerblue;
 }
+
+.center {
+    text-align: center;
+  }
+
+
+.main-content {
+    position: relative;
+    top: 15rem; /* To offset for fixed header. */
+  }
 
 .fade {
     position: relative; 
@@ -33,12 +46,13 @@ html {
 
 /* Header */
 header {
-    position: relative;
+    position: fixed;
     width: 100%;
     overflow: hidden;
     border: solid;
     height: 15rem;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgb(255, 255, 255);
+    z-index: 1;
 }
 
 header .content {
@@ -81,11 +95,33 @@ header li a:hover {
 
 /* sign-up section */
 #sign-up-section {
-    display: flex;
-    justify-content: space-between;
+    margin: 0 auto;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 40% 40%;
+    justify-items: center;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    background-image: url('resources/images/CI_habor.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+    border: solid;
+    border-color: red;
 }
 
 .sign-up {
+    width: 24rem;
+    height: 23rem;
+    margin: 3rem;
     border: solid;
     border-width: 4px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.5);
+    align-content: center;
+}
+
+.sign-up img {
+    width: 100%;
+    height: auto;
 }
