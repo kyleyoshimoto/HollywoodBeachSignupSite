@@ -120,6 +120,7 @@ header .phone-number {
     line-height: 1.25;
     height: 50%;
     margin: auto;
+    border: solid 1px black;
 }
 
 /* sign-up section */
@@ -148,6 +149,10 @@ header .phone-number {
     background-color: rgba(255, 255, 255, 0.8);
     align-content: center;
     flex-shrink: 1;
+}
+
+.sign-up h1 {
+    padding: 0 1rem;
 }
 
 .sign-up a {
